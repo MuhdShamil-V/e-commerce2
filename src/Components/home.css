@@ -1,0 +1,47 @@
+.text1{
+    color: whitesmoke;
+    position: absolute;
+    top: 38%;
+    left: 5%;
+    font-size: 70px;
+}
+
+.text2{
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 70px;
+}
+
+.mn-btn{
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    border-radius: 0%;
+}
+
+.wn-btn{
+    position: absolute;
+    top: 85%;
+    left: 16%;
+    border-radius: 0%;
+}
+
+.mn-btn:hover{
+    background-color: black;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wn-btn:hover{
+    background-color: black;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.adm-src{
+    border-radius: 0%;
+}
