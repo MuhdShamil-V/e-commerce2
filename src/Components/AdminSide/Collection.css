@@ -1,0 +1,59 @@
+
+.admin-collection-container {
+  margin: 20px;
+}
+
+.admin-collection-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.admin-collection-header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-collection-row td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-collection-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.admin-collection-button {
+  padding: 5px 10px;
+  margin: 3px;
+  border: none;
+  background-color: #3498db;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-variant: initial;
+}
+
+.admin-collection-button.remove-button {
+  background-color: #e74c3c;
+}
+
+.admin-collection-button.update-button {
+  background-color: #27ae60; 
+}
+
+.admin-collection-button:hover {
+  opacity: 0.8;
+}
+
+.admin-collection-button:hover {
+  background-color: #2980b9;
+}
+
+.admin-collection-image {
+  width: 50px;
+}

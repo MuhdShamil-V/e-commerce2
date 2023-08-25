@@ -12,11 +12,15 @@ import Women from "./Components/Women";
 import ViewPrdct from "./Components/ViewPrdct";
 import { Product } from "./Components/ProductData";
 import MyCart from "./Components/MyCart";
-import Footer from "./Components/Footer";
+import Adminbar from "./Components/AdminSide/Adminbar";
+import UserSearch from "./Components/UserSearch";
+import AdminUser from "./Components/AdminSide/AdminUser";
+import AdminCollection from "./Components/AdminSide/AdminCollection";
 
 
 
 function App() {
+ 
 
   const [product, setProduct] = useState(Product);
 
@@ -26,12 +30,18 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
+  const [search, setSearch] = useState();
+
+  const [adminSearch, setAdminSearch] = useState();
+
+  const [edit, seEdit] = useState()
+
 
 
   return (
     <div>
       
-      <br></br><br></br>
+     
       <myContext.Provider value={{
          user,
          setUser,
@@ -45,14 +55,26 @@ function App() {
          cart,
          setCart,
 
+         search,
+         setSearch,
+
+         adminSearch,
+         setAdminSearch,
+
+         edit,
+         seEdit,
+
         
          }}>
           
           
         
+       
+       
         <BrowserRouter>
-        <NavBar/>
+         <NavBar />
           <Routes>
+          
             <Route path="/signup" element = {<Signup />} />
             <Route path="/login" element = {<Login />} />
             <Route path="/" element={<Home />} />
@@ -61,8 +83,15 @@ function App() {
             <Route path="/women" element= {<Women />} />
             <Route path="/viewproduct/:Id" element= {<ViewPrdct />} />
             <Route path="/mycart" element= {<MyCart />} />
+            <Route path="/usersearch" element= {<UserSearch />} />
+            <Route path="/adminbar" element= {<Adminbar />} />
+            <Route path="/adminuser" element={<AdminUser />} />
+            <Route path="/admincollection" element={<AdminCollection />} />
+              
+            
+
+          
           </Routes>
-          <Footer />
         </BrowserRouter>
       </myContext.Provider>
     </div>

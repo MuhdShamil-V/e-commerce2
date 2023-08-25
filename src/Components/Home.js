@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import '../Components/home.css';
 import Collection from './Collection';
+import Footer from './Footer';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
     <br></br>
     <div>
       <Collection />
+      <Footer />
     </div>
     </>
   );
