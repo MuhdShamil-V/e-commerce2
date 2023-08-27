@@ -1,15 +1,19 @@
 import React, { useContext } from 'react';
 import { myContext } from '../Context';
 import '../AdminSide/Collection.css';
+import { useNavigate } from 'react-router-dom';
 
 function AdminCollection() {
+
+  const navigate = useNavigate();
   const { product, setProduct } = useContext(myContext);
   console.log(product);
 
   const RemovePrdct = (productId)=> {
       const updatedProducts = product.filter(item => item.Id !== productId)
-      setProduct(updatedPr  oducts);
+      setProduct(updatedProducts);
   }
+
 
   return (
     <div className="admin-collection-container">
@@ -40,7 +44,7 @@ function AdminCollection() {
               onClick={()=> RemovePrdct(item.Id)}>
                 Remove
               </button>
-              <button className="admin-collection-button update-button">Update</button>
+              <button className="admin-collection-button update-button" onClick={()=> navigate(`/adminedit/${item.Id}`)}>Update</button>
               </td>
             </tr>
           ))}

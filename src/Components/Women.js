@@ -1,13 +1,16 @@
 import React from 'react'
-import { Product } from './ProductData'
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { myContext } from './Context';
 
 function Women() {
 
   const navigate = useNavigate();
 
-    const womenProduct = Product.filter((item) => item.Gender === 'Female');
+  const {product} = useContext(myContext);
+
+    const womenProduct = product.filter((item) => item.Gender === 'Female');
 
   return (
     <div>

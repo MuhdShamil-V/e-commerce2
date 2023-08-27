@@ -16,6 +16,7 @@ import Adminbar from "./Components/AdminSide/Adminbar";
 import UserSearch from "./Components/UserSearch";
 import AdminUser from "./Components/AdminSide/AdminUser";
 import AdminCollection from "./Components/AdminSide/AdminCollection";
+import AdminEdit from "./Components/AdminSide/AdminEdit";
 
 
 
@@ -34,7 +35,7 @@ function App() {
 
   const [adminSearch, setAdminSearch] = useState();
 
-  const [edit, seEdit] = useState()
+  const [edit, setEdit] = useState()
 
 
 
@@ -62,7 +63,7 @@ function App() {
          setAdminSearch,
 
          edit,
-         seEdit,
+         setEdit,
 
         
          }}>
@@ -87,6 +88,7 @@ function App() {
             <Route path="/adminbar" element= {<Adminbar />} />
             <Route path="/adminuser" element={<AdminUser />} />
             <Route path="/admincollection" element={<AdminCollection />} />
+            <Route path="/adminedit" element={<AdminEdit />} />
               
             
 
