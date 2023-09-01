@@ -7,8 +7,8 @@ function Login() {
 
   const { user, setLogin } = useContext(myContext);
 
-  const nameRef = useRef();
-  const passwordRef = useRef();
+  const nameRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const handleLogin = (e) => {
     e.preventDefault();

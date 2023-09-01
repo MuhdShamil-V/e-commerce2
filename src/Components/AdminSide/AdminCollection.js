@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { myContext } from '../Context';
-import '../AdminSide/Collection.css';
+import '../AdminSide/AdminCollection.css';
 import { useNavigate } from 'react-router-dom';
 
 function AdminCollection() {

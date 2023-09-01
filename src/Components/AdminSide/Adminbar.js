@@ -18,6 +18,9 @@ function Adminbar() {
         <li className="adminbar-item">
           <Link to="/adminuser">Users</Link>
         </li>
+        <li className="adminbar-item">
+          <Link to="/">Home</Link>
+        </li>
       </ul>
     </div>
 

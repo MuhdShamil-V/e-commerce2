@@ -3,6 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { myContext } from './Context';
+import NavBar from './NavigationBar';
 
 function Women() {
 
@@ -13,6 +14,12 @@ function Women() {
     const womenProduct = product.filter((item) => item.Gender === 'Female');
 
   return (
+
+    <div>
+
+      <div>
+        <NavBar />
+      </div>
     <div>
         <h2 style={{fontStyle: 'italic'}}>Women Collections</h2>
 
@@ -31,6 +38,7 @@ function Women() {
           </Card>
         </div>
       ))}
+    </div>
     </div>
     </div>
   )

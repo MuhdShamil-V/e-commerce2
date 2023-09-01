@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { BsCart4 } from 'react-icons/bs';
 import { myContext } from './Context';
+import NavBar from './NavigationBar';
 
 
 function MyCart() {
@@ -39,6 +40,13 @@ function MyCart() {
   };
 
   return (
+
+    <div>
+
+      <div>
+        <NavBar />
+      </div>
+      
     <div>
       <h2 style={{ fontStyle: 'italic' }}>
         <BsCart4 /> MY CART
@@ -115,6 +123,7 @@ function MyCart() {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 }

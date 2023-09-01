@@ -8,7 +8,7 @@ function AdminUser() {
   console.log(user);
 
   return (
-    <div style={{ backgroundColor: 'white', width: '100%' }}>
+    <div style={{ backgroundColor: 'white', width: '70%', margin: '0 auto' }}>
       <h1 style={{ textAlign: 'center' }}>User</h1>
       <br />
       <br />

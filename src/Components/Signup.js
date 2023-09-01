@@ -7,20 +7,25 @@ function Signup() {
 
   const { user, setUser } = useContext(myContext);
 
-  const nameRef = useRef();
-  const passwordRef = useRef();
-  const emailRef = useRef();
+  const nameRef = useRef({});
+  const emailRef = useRef({})
+  const passwordRef = useRef({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const nameValue = nameRef.current.value;
-    const PasswordValue = passwordRef.current.value;
     const emailValue = emailRef.current.value;
+    const PasswordValue = passwordRef.current.value;
 
     setUser([...user, { name: nameValue, email: emailValue, password: PasswordValue, id: Date.now() }]);
     console.log(user);
 
-    navigate('/login');
+    if(PasswordValue.length && nameValue.length>0){
+      navigate('/login');
+    }else{
+      alert('enter a valid username and password')
+    }
+    
   };
 
   return (
@@ -54,10 +59,10 @@ function Signup() {
             borderRadius: '5px',
           }}
         />
+
         <input
-        className='controlId="formBasicEmail'
-          type="text"
-          placeholder="E-mail Id"
+          type="email"
+          placeholder="Enter the email"
           ref={emailRef}
           style={{
             padding: '10px',
@@ -67,6 +72,7 @@ function Signup() {
             borderRadius: '5px',
           }}
         />
+
         <input
           type="password"
           placeholder="Enter the Password"
@@ -79,6 +85,7 @@ function Signup() {
             borderRadius: '5px',
           }}
         />
+        
         <button
           onClick={handleSubmit}
           style={{

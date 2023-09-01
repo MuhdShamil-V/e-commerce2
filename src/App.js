@@ -5,7 +5,6 @@ import Home from "./Components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './Components/Signup';
 import Login from './Components/Login';
-import NavBar from "./Components/NavigationBar";
 import Collection from "./Components/Collection";
 import Men from "./Components/Men";
 import Women from "./Components/Women";
@@ -17,6 +16,8 @@ import UserSearch from "./Components/UserSearch";
 import AdminUser from "./Components/AdminSide/AdminUser";
 import AdminCollection from "./Components/AdminSide/AdminCollection";
 import AdminEdit from "./Components/AdminSide/AdminEdit";
+import AdminLogin from "./Components/AdminSide/AdminLogin";
+import AddProduct from "./Components/AdminSide/AddProduct";
 
 
 
@@ -31,12 +32,7 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
-  const [search, setSearch] = useState();
-
-  const [adminSearch, setAdminSearch] = useState();
-
-  const [edit, setEdit] = useState()
-
+  const [admin, setAdmin] = useState();
 
 
   return (
@@ -56,24 +52,14 @@ function App() {
          cart,
          setCart,
 
-         search,
-         setSearch,
-
-         adminSearch,
-         setAdminSearch,
-
-         edit,
-         setEdit,
-
+         admin,
+         setAdmin,
         
          }}>
           
-          
         
        
-       
         <BrowserRouter>
-         <NavBar />
           <Routes>
           
             <Route path="/signup" element = {<Signup />} />
@@ -88,7 +74,9 @@ function App() {
             <Route path="/adminbar" element= {<Adminbar />} />
             <Route path="/adminuser" element={<AdminUser />} />
             <Route path="/admincollection" element={<AdminCollection />} />
-            <Route path="/adminedit" element={<AdminEdit />} />
+            <Route path="/adminedit/:Id" element={<AdminEdit />} />
+            <Route path="/adminlogin" element={<AdminLogin />} />
+            <Route path="/addproduct" element={<AddProduct />} />
               
             
 

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { myContext } from './Context';
+import NavBar from './NavigationBar';
 
 
 
@@ -12,6 +13,12 @@ function Collection() {
   const {product} = useContext(myContext)
 
   return (
+
+    <div>
+
+      <div>
+        <NavBar />
+      </div>
     <div>
       <h2 style={{fontStyle: 'italic'}}>Collections</h2>
     <div className="d-flex align-items-center justify-content-center flex-wrap">
@@ -30,6 +37,7 @@ function Collection() {
           </Card>
         </div>
       ))}
+    </div>
     </div>
     </div>
   );
