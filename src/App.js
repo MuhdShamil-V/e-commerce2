@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { myContext } from "./Components/Context";
 import Home from "./Components/Home";
@@ -12,7 +12,6 @@ import ViewPrdct from "./Components/ViewPrdct";
 import { Product } from "./Components/ProductData";
 import MyCart from "./Components/MyCart";
 import Adminbar from "./Components/AdminSide/Adminbar";
-import UserSearch from "./Components/UserSearch";
 import AdminUser from "./Components/AdminSide/AdminUser";
 import AdminCollection from "./Components/AdminSide/AdminCollection";
 import AdminEdit from "./Components/AdminSide/AdminEdit";
@@ -36,8 +35,6 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const [admin, setAdmin] = useState();
-
-  const [search, setSearch] = useState()
 
 
   return (
@@ -75,7 +72,6 @@ function App() {
             <Route path="/women" element= {<Women />} />
             <Route path="/viewproduct/:Id" element= {<ViewPrdct />} />
             <Route path="/mycart" element= {<MyCart />} />
-            <Route path="/usersearch" element= {<UserSearch />} />
             <Route path="/adminbar" element= {<Adminbar />} />
             <Route path="/adminuser" element={<AdminUser />} />
             <Route path="/admincollection" element={<AdminCollection />} />
