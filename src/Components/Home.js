@@ -16,7 +16,7 @@ const Home = () => {
       <NavBar />
     </div>
     <div>
-      <img style={{width: '100%'}} src='https://dev-resources.mynpp.com/app/uploads/2019/08/20144659/skechers-sneakers-sale.png'/><br/><br/>
+      <img style={{width: '100%'}} src='https://dev-resources.mynpp.com/app/uploads/2019/08/20144659/skechers-sneakers-sale.png' alt='main banner'/><br/><br/>
 
       <Button className='mn-btn' variant='light' size='lg' onClick={()=> navigate('/men')}>SHOP MEN</Button>
       <Button className='wn-btn' variant='light' size='lg' onClick={()=> navigate('/women')}>SHOP WOMEN</Button>

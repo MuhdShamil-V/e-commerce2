@@ -20,7 +20,7 @@ function ViewPrdct() {
     if(login){
 
       const[newData] = filteredProduct;
-      const duplicate = cart.filter((item)=>item.Id==Id);
+      const duplicate = cart.filter((item)=>item.Id === Id);
 
       if(duplicate.length>0){
         return alert ("Product already exists");
