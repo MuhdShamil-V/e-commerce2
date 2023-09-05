@@ -65,7 +65,8 @@ function MyCart() {
                 <Card.Img variant="top" src={item.Image} />
                 <Card.Body style={{ textAlign: 'center' }}>
                   <Card.Title>{item.ProductName}</Card.Title>
-                  <h6>Price: ₹ {item.Price}</h6>
+                  <h6>Gender: {item.Gender}</h6>
+                  <h5>Price: ₹ {item.Price}</h5>
                   <div>
                     <p>
                       Qty:
@@ -91,7 +92,7 @@ function MyCart() {
                   <Button variant="outline-primary">Buy Product</Button>
 
                   <Button
-                    onClick={() => remove(item.Id)} // Pass the item.Id directly
+                    onClick={() => remove(item.Id)} 
                     className="ms-3"
                     variant="outline-danger"
                   >

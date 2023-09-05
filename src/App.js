@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { myContext } from "./Components/Context";
 import Home from "./Components/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,7 +22,10 @@ import AddProduct from "./Components/AdminSide/AddProduct";
 
 
 function App() {
- 
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
 
   const [product, setProduct] = useState(Product);
 
@@ -33,6 +36,8 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const [admin, setAdmin] = useState();
+
+  const [search, setSearch] = useState()
 
 
   return (

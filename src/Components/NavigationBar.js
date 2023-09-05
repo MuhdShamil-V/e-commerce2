@@ -4,10 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { HiMiniShoppingCart } from 'react-icons/hi2';
 import { BiLogOutCircle } from 'react-icons/bi';
-import { Link, useNavigate } from 'react-router-dom';
+import { Form, Link, useNavigate } from 'react-router-dom';
 import { myContext } from './Context';
 import { BsPersonLinesFill } from 'react-icons/bs';
 import { RiAdminFill } from 'react-icons/ri';
+import { Button } from 'react-bootstrap';
 
 
 function NavBar() {
@@ -64,6 +65,7 @@ function NavBar() {
             </Nav.Link>
 
           </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
